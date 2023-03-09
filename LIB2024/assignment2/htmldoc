@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Webpage Title</title>
+	<link rel="icon" type="image/x-icon" href="/LIB2024/assignment2/images/sballoon.png">
+	<meta name="description" content="write webpage description here">
+	<meta name="author" content="Stephanie Meloche">
+	<meta charset="UTF-8">
+	<meta name="keywords" content="list, keywords, here">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="30">
+	
+	<style>
+	<!-- HEADER STYLE -->
+		header {
+		background-color: ;
+		padding: 30px;
+		text-align: center;
+		font-size:
+		color: lavenderblush;
+	}
+
+	<!-- FOOTER STYLE -->
+	footer {
+		background-color: ;
+		padding: 10px;
+		text-align: center;
+		color: lavenderblush;
+	}
+
+	<!-- FLEX BOX STYLE -->
+	.flex-container {
+		display: flex;
+		height:
+		flex-wrap: wrap;
+		align-content: space-between;
+		justify-content: center;
+		overflow: scroll;
+		background-color: hotpink;
+	}
+
+	.flex-container > div {
+		background-color: lavenderblush;
+		width: 100px;
+		margin: 10px;
+		padding: 20px;
+		line-height: 75px;
+		font-size: 30px;
+		font-color: hotpink;
+	}
+	</style>
+</head>
+
+<body>
+<!-- HEADER -->
+	<h1>YOU'RE INVITED</h1>
+	<h2> to the best party of the year!</h2>
+
+<!-- TEXT WRAP -->
+
+<!-- BACKGROUND IMAGE -->
+
+<!-- WATERMARK -->
+
+<!-- FLEXBOX GALLERY -->
+	<div class="flex-container">
+ 		<div>1</div>
+  		<div>2</div>
+  		<div>3</div>
+  		<div>4</div>
+  		<div>5</div>
+  		<div>6</div>
+	</div>
+<!-- FOOTER -->
+
+</body>
+</html>
