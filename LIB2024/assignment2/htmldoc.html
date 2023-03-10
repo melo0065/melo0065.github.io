@@ -13,59 +13,39 @@
 
 <!-- CSS STYLE -->
 	<style>
-		
-		body {
-			background-color: lavenderblush;
-		}
-
-		.hotpink-section {
-			border-color: lavenderblush; border-style: solid; margin: 5px;background-color: hotpink;
-		}
-
-		h1 {
-			color: hotpink;
-			font-size: 80px;
-			text-align: center;
-			text-transform: uppercase;
-		}
-
-		h2 {
-			color: lavenderblush;
-			font-size: 30px;
-			text-align: center;
-		}
-
-		h3 {
-			color: hotpink;
-			font-size: 12px;
-			text-align: center;
-			text-overflow: flow;
-		}
-		
-		p {
-			color: hotpink;
-			font-size: 16px;
-			margin: 5px;
-		}
-
-				
 		.header-border {
 			border-color: hotpink; border-style: dotted;
+			color: hotpink;
+			font-size: 30px;
+			text-align: center;
+			text-transform: uppercase;
+			margin: 10px;
 		}
 
-		.textwrap-section {
-			padding: 20px;
+		.textwrap {
+			column-count: 3;
+			color: hotpink;
+			font-size: 18px;
+			text-align: justify;
 			text-overflow: flow;
-
+			padding: 10px;
 		}
 
 		.wrapped-image {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
 			height: 400px;
-			position: center;
-			margin: 20px;
+			float: absolute;
 		}
 
-		
+		.hotpink-section {
+			border-color: lavenderblush; 
+			border-style: solid; 
+			margin: 5px;
+			background-color: hotpink;
+		}
+						
 		.sixpics-container {
 			margin: 10px;
 			display: flex;
@@ -78,20 +58,27 @@
 	</style>
 </head>
 
-<body>
+<body style="background-color: lavenderblush;">
+
 <!-- HEADER -->
 	<div class="header-border">
 		<h1>Steph's Book Reccs</h1>
 	</div>
 
 <!-- TEXT WRAP-->
-	<div class="textwrap-section">
-		<p>
-			Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image.
-			Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image.
-
-			<img class="wrapped-image" style="float: center;" src="onelaststop.png" alt="One Last Stop by Casey McQuiston">
-		</p>
+	<div class="textwrap">
+		<p>My sister-in-law gifted me Casey McQuiston's book for Christmas stating, and I quote, "I've been holding onto it for 4 months knowing you'd love it because it's both gay and magical!"</p> 
+		<p> Not needing any other reason, I dove into <i>One Last Stop</i> as soon as I left my parents to cat-sit for a friend of mine over New Year's Eve -- devouring it within the week. </p>
+		<p> Written in 2021, this lesbian romance novel tells the story of August Landry who moves to New York to finally finish university, get a job, and maybe fall in love. But just as she's starting to get her life together, August's life unravels through time and space. </p>
+	</div>
+		<div>
+		<img class="wrapped-image" src="onelaststop.png" alt="One Last Stop by Casey McQuiston">
+		</div>
+	<div class="textwrap">
+		<p> Is August ready for the adventure the NYC subway is ready to throw her way? </p>
+		<p> What if that adventure was named Jane Su? A punk lesbian from the 1970s trapped in limbo, between time and space, on the Q for nearly 50 years? </p>
+		<p> Well, I suppose that's for you to find out with August since she's about to bump right into Jane on her first day at NYU. </p>
+		<p> The fact that the novel takes place in New York City, in my opinion, makes the perfect location for a story chocked-full of mysterious time-travelling and magical realism. </p>
 	</div>
 
 <!-- BACKGROUND IMAGE -->
@@ -101,7 +88,7 @@
 
 <!-- 6 PICTURES -->
 	<div class="hotpink-section">
-		<h2>CHECK OUT THESE OTHER GREAT BOOKS</h2>
+		<h2 style="color: lavenderblush; font-size: 30px; text-align: center;">CHECK OUT THESE OTHER GREAT BOOKS</h2>
 		<div class="sixpics-container">
   			<div><img src="delilahgreen.png" height="200px" alt="Delilah Green Doesn't Care by Ashley Herring Blake"></div>
   			<div><img src="evelynhugo.png" height="200px" alt="The Seven Husbands of Evelyn Hugo by Taylor Jenkins Reid"></div>
@@ -114,7 +101,7 @@
 
 
 <!-- FOOTER -->
-	<h3>by Stephanie Meloche for LIB2024 </h3>
+	<h3 style="color: hotpink; font-size: 20px; text-align: center; text-overflow: flow;">by Stephanie Meloche for LIB2024 </h3>
 	
 </body>
 </html>
