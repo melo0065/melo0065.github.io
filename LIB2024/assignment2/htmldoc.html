@@ -18,52 +18,59 @@
 			background-color: lavenderblush;
 		}
 
-		div {
-			border-color: hotpink; border-style: dotted;
-		}
-
-		section {
+		.hotpink-section {
 			border-color: lavenderblush; border-style: solid; margin: 5px;background-color: hotpink;
 		}
 
 		h1 {
 			color: hotpink;
-			font-size: 100px;
+			font-size: 80px;
 			text-align: center;
+			text-transform: uppercase;
 		}
 
 		h2 {
-			color: hotpink;
+			color: lavenderblush;
 			font-size: 30px;
 			text-align: center;
 		}
 
 		h3 {
-			color: lavenderblush;
-			font-size: 20px;
+			color: hotpink;
+			font-size: 12px;
 			text-align: center;
 			text-overflow: flow;
 		}
-
-		h4 {
-			color: lavenderblush;
-			font-size: 16px;
-			text-align: center;
-			text-overflow: flow;
-		}
-
+		
 		p {
 			color: hotpink;
 			font-size: 16px;
 			margin: 5px;
 		}
 
-		.flex-container {
-  			display: flex;
-  			height: 500px;
- 			flex-wrap: wrap;
- 			justify-content: center;
- 			align-items: space-between;
+				
+		.header-border {
+			border-color: hotpink; border-style: dotted;
+		}
+
+		.textwrap-section {
+			padding: 20px;
+			text-align: justify;
+			white-space: wrap;
+
+		}
+
+		.wrapped-image {
+			float: center;
+		}
+
+		.sixpics-container {
+			margin: 10px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: stretch;
 		}
 
 	</style>
@@ -71,26 +78,31 @@
 
 <body>
 <!-- HEADER -->
-	<div>
+	<div class="header-border">
 		<h1>Steph's Book Reccs</h1>
 	</div>
 
-<!-- TEXT WRAP & IMAGE 1 -->
-	<p style="column-count: 2;" "column-width: half;" "text-align: left;" "text-overflow: flow">
-		Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image.
-	</p>
-	<p><img src="onelaststop.png" height="500px" alt="One Last Stop by Casey McQuiston" item-po></p>
-	<p style="column-count: 2;" "column-width: half;" "text-align: right;" "text-overflow: flow">
-		Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image.
-	</p>
+<!-- TEXT WRAP-->
+	<div class="textwrapimage-section">
+		<!-- IMAGE TO WRAP -->
+		<p>
+			Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image.
+		</p>
+		<img class="wrapped-image" src="onelaststop.png" height="500px" alt="One Last Stop by Casey McQuiston">
+		<p>
+			Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image. Here's a bunch of text that's meant to wrap around the image.
+		</p>
+	</div>
 
-<!-- BACKGROUND IMAGE/WATERMARK -->
+<!-- BACKGROUND IMAGE -->
+	<div>
+		<img src="lesbianprideheart.png" height="50px" alt="lesbian pride flag heart" align="center">
+	</div>
 
-	
 <!-- 6 PICTURES -->
-	<section>
-		<h3>CHECK OUT THESE OTHER GREAT BOOKS</h3>
-		<div class="flex-container">
+	<div class="hotpink-section">
+		<h2>CHECK OUT THESE OTHER GREAT BOOKS</h2>
+		<div class="sixpics-container">
   			<div><img src="delilahgreen.png" height="200px" alt="Delilah Green Doesn't Care by Ashley Herring Blake"></div>
   			<div><img src="evelynhugo.png" height="200px" alt="The Seven Husbands of Evelyn Hugo by Taylor Jenkins Reid"></div>
   			<div><img src="honeygirl.png" height="200px" alt="Honey Girl by Morgan Rogers"></div>
@@ -98,13 +110,11 @@
   			<div><img src="shegetsthegirl.png" height="200px" alt="She Gets the Girl by Rachael Lippincott and Alyson Derrick"></div>
   			<div><img src="timewar.png" height="200px" alt="This is How You Lose the Time War by Amal El-Mohtar and Max Gladstone"></div>
 		</div>
-	</section>
+	</div>
 
 
 <!-- FOOTER -->
-	<section>
-		<h4 style="background-color:hotpink;"> by Stephanie Meloche for LIB2024 </h4>
-	</section>
+	<h3>by Stephanie Meloche for LIB2024 </h3>
 	
 </body>
 </html>
