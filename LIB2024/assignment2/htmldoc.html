@@ -34,6 +34,9 @@
 		.col1,
 		.col2 {
   			padding: 10px;
+  			color: hotpink;
+			font-size: 20px;
+			text-align: center;
   			text-align: justify;
   			width: calc(50% + 220px);
 		}
@@ -105,22 +108,12 @@
   			}
 		}
 
-		.watermark {
-			position: absolute;
-			top: -75%;
-			left: -75%;
-
-			display: block;
-			width: 150%;
-			height: 150%;
-
-  			transform: rotate(-45deg);
-  			content: attr(data-watermark);
-  			
-  			opacity: 0.3;
-  			line-height: 3em;
-  			letter-spacing: 2px;
-  			color: hotpink;
+		#watermark {
+			position: relative;
+			color: hotpink;
+			text-align: center;
+			text-overflow: flow;
+			opacity: 0.5;
   		}
 
   		.backgroundimg {
@@ -152,8 +145,6 @@
 </head>
 
 <body style="background-color: lavenderblush;">
-<!-- WATERMARK -->
-
 
 <!-- HEADER -->
 	<div class="header-border">
@@ -183,8 +174,12 @@
 		</div>
 	</div>
 
+<!-- WATERMARK -->
+	<div class="banner-card">
+		<div id="watermark">
+			<p> Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! Steph's Book Reccs! </p>
+		</div>
 <!-- BACKGROUND IMAGE -->
-	<div>
 		<img class="backgroundimg" src="onelaststop.png" height="300px" alt="One Last Stop by Casey McQuiston">
 	</div>
 
@@ -200,7 +195,6 @@
   			<div><img src="timewar.png" height="200px" alt="This is How You Lose the Time War by Amal El-Mohtar and Max Gladstone"></div>
 		</div>
 	</div>
-
 
 <!-- FOOTER -->
 	<h3 style="color: hotpink; font-size: 20px; text-align: center; text-overflow: flow;">by Stephanie Meloche for LIB2024 </h3>
