@@ -61,7 +61,9 @@
 
 		#latestreccsheading {
 		  color: hotpink;
-		  font-size: 50px;
+		  font-size: 30px;
+		  padding-top: 50px;
+		  padding-bottom: 20px;
 		}
 
 		#latestreccssubheading {
@@ -69,33 +71,69 @@
 		  font-size: 20px;
 		}
 
-		#latestreccsimage {
+		.latestreccsimage {
 			height: 200px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			animation-duration: 2s;
+		    animation-iteration-count: infinite;
+		    transform-origin: bottom;
+		    animation-name: bounce;
+    		animation-timing-function: ease;
 		}
 
-		#hotpinkparagraph {
+		@keyframes bounce {
+			0%   { transform: translateY(0); }
+			50%  { transform: translateY(-50px); 
+		}
+			100% { transform: translateY(0); }
+		}
+		
+  		.latestreccs {
+  			padding: 20px;
+  			border-spacing: 20px;
+  			position: relative;
+  			display: flex;
+  			justify-content: space-evenly;
+  			background-color: lavenderblush;
+  		}
+
+  		#hotpinkparagraph {
 			color: hotpink;
+			text-align: left;
 		}
 
 		#whiteparagraph {
 			color: white;
 		}
 
-  		.w3-row-padding {
-  			padding: 20px;
-  			border-spacing: 10px;
-  			position: relative;
-  			display: flex;
-  			background-color: lavenderblush;
-  		}
+  		.spoilerbutton {
+			color: hotpink;
+			font-size: 20px;
+			background-color: white;
+			border-color: lavenderblush;
 
-  		.checked {
-  			color: orange;
-			}
+		}
+
+		#spoilers {
+			color: white;
+			font-size: 20px;
+		}	
   	</style>
-<!--JAVA SCRIPT -->
+<!-- JAVASCRIPT -->
 	<script>
-		
+	var i = 0;
+	var txt = 'no spoilers for you! haha';
+	var speed = 50;
+
+	function typeWriter() {
+	  if (i < txt.length) {
+	    document.getElementById("spoilers").innerHTML += txt.charAt(i);
+	    i++;
+	    setTimeout(typeWriter, speed);
+	  }
+	}
 	</script>
 </head>
 
@@ -103,7 +141,9 @@
 <!-- HEADER -->
 	<div class="wrap">
 		<div class="col1">
-			<img class="image" src="logo.png">
+			<div id="animatedlogo">
+				<img class="image" src="logo.png">
+			</div>
 		</div>
 			<div class="col2">
 				<h1 id="myHeader">Steph's Book Reccs!</h1>
@@ -119,56 +159,39 @@
 			<div class="col4">
 				<h2 id="highlightheading">Currently Reading</h2>
 				<p id="highlightparagraph">I'm currently reading <i>The Arsonists' City</i> by Hala Alyan.</p>
+				<button class="spoilerbutton" onclick="typeWriter()">Click to read spoilers!</button>
+				<p id="spoilers"></p>
 			</div>
 		</div>
 	</div>
 
 	<div>
 		<h2 id="latestreccsheading"> Latest Reccomendations </h2>
-	<div class="w3-row-padding">
-  		<div class="w3-third">
-  			<img id="latestreccsimage" src="onelaststop.png">
-    		<h2 id="latestreccssubheading"><i>One Last Stop</i></h2>
-   	 		<p id="hotpinkparagraph">by Casey McQuiston</p>
-    		<p id="hotpinkparagraph">It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    		<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-  		</div>
+		<div class="latestreccs">
+	  		<div class="latestreccs-third">
+	  			<img class="latestreccsimage" src="onelaststop.png">
+	    		<h2 id="latestreccssubheading"><i>One Last Stop</i></h2>
+	   	 		<p id="hotpinkparagraph">by Casey McQuiston</p>
+	  		</div>
 
-		<div class="w3-third">
-			<img id="latestreccsimage" src="honeygirl.png">
-		    <h2 id="latestreccssubheading"><i>Honey Girl</i></h2>
-		    <p id="hotpinkparagraph">by Morgan Rogers</p>
-		    <p id="hotpinkparagraph">The Paris area is one of the largest population centers in Europe,
-		    with more than 12 million inhabitants.</p>
-		    <span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-	 	</div>
+			<div class="latestreccs-third">
+				<img class="latestreccsimage" src="honeygirl.png">
+			    <h2 id="latestreccssubheading"><i>Honey Girl</i></h2>
+			    <p id="hotpinkparagraph">by Morgan Rogers</p>
+		 	</div>
 
-		 <div class="w3-third">
-		 	<img id="latestreccsimage" src="polarvortex.png">
-		    <h2 id="latestreccssubheading"><i>Polar Vortex</i></h2>
-		    <p id="hotpinkparagraph">by Shani Mootoo</p>
-		    <p id="hotpinkparagraph">It is the center of the Greater Tokyo Area,
-		    and the most populous metropolitan area in the world.</p>
-		    <span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-		 </div>
+			<div class="latestreccs-third">
+				<img class="latestreccsimage" src="polarvortex.png">
+			 	<h2 id="latestreccssubheading"><i>Polar Vortex</i></h2>
+			    <p id="hotpinkparagraph">by Shani Mootoo</p>
+			 </div>
+		</div>
 	</div>
 
-
-
 <!-- FOOTER -->
-
+	<div>
+		<p id="hotpinkparagraph">Stephanie Meloche for LIB2024</p>
+	</div>
 
 </body>
 
