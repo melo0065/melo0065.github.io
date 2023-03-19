@@ -10,7 +10,14 @@
 	<meta name="keywords" content="books, book reccomendations, book reccs, lgbtq books, book review">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="refresh" content="30">
+<!--CSS STYLE SHEET -->
 	<style>
+		#myHeader {
+		  color: hotpink;
+		  font-size: 20px;
+		  text-align: right;
+		}
+
 		.col1,
 		.col2 {
   			padding: 10px;
@@ -31,39 +38,63 @@
 
   		.highlightcontent {
   			border-spacing: 10px;
-  			border-style: solid;
-  			border-width: 20px;
-  			border-color: hotpink;
+  			position: relative;
+  			display: flex;
+  			background-color: hotpink;
+  			color: white;
   		}
+
+  		#highlightheading {
+		  color: white;
+		  font-size: 50px;
+		}
+
+		#highlightparagraph {
+		  color: white;
+		  font-size: 20px;
+		}
+
+		#hotpinkparagraph {
+			color: hotpink;
+		}
+
+		#whiteparagraph {
+			color: white;
+		}
 
   		.w3-row-padding {
   			border-spacing: 10px;
   			position: relative;
   			display: flex;
   		}
-
-  		.left { 
-  			float: left; 
-  			padding: 0 20px 20px 0;
-  		}	
-	</style>
+  	</style>
+<!--JAVA SCRIPT -->
+	<script>
+		
+	</script>
 </head>
 
 <body>
 <!-- HEADER -->
 	<div class="wrap">
-			<div class="col1">
-				<img class="image" src="logo.png">
+		<div class="col1">
+			<img class="image" src="logo.png">
+		</div>
+			<div class="col2">
+				<h1 id="myHeader">Steph's Book Reccs!</h1>
 			</div>
-				<div class="col2">
-					<p> Steph's Book Reccs! </p>
-				</div>
 		</div>
 	</div>
 <!-- MAIN -->
 	<div class="highlightcontent">
- 			<h1>Currently Reading</h1>
-  				<p>I'm currently reading this book.</p>
+		<div>
+			<h2 id="highlightheading">Currently Reading</h2>
+			<p id="highlightparagraph">I'm currently reading this book.</p>
+		</div>
+			<div>
+				<img class="right" src="arsonistscity.png">
+			</div>
+		</div>
 	</div>
 
 	<div class="w3-row-padding">
