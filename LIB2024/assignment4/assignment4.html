@@ -20,43 +20,24 @@
 		}
 
 		h1 {
-			color: #E85E53;
+			color: #FAA356;
 			font-family: cursive;
 			font-size: 50px;
 			text-align: center;
-			text-shadow: 2px 2px #FAA35C;
+			text-shadow: 2px 2px white;
 		}
 
 		hr.rounded {
-  			border-top: 8px solid #E85E53;
-  			border-radius: 2px;
+  			border-top: 8px solid #FAA356;
+  			border-radius: 5px;
 		}
 
-		.converter {
+		#container {
 			border-style: solid;
-			border-width: 10px;
-			border-color: #BBE9F8;
+			border-width: 5px;
+			border-color: #FAA356;
 			border-radius: 5px;
-			background-color: #BBE9F8;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-			align-items: stretch;
-			align-content: space-around;
-		}
-
-		.converterbuttons {
-			color: #FAA356;
-			font-family: cursive;
-		}
-
-		.result {
-			border-style: solid;
-			border-width: 10px;
-			border-color: #BBE9F8;
-			border-radius: 5px;
-			background-color: #BBE9F8;
+			background-color: white;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -72,7 +53,7 @@
 			text-align: center;
 		}
 
-		#converterparatext {
+		.para1 {
 			color: #FAA35C;
 			font-family: cursive;
 			font-weight: bold;
@@ -80,21 +61,24 @@
 			text-align: left;
 		}
 
-		#thermometer {
-			justify-content: center;
+		.para2 {
+			color: #FAA35C;
+			font-family: cursive;
+			font-weight: bold;
+			font-size: 15px;
+			text-align: center;
 		}
+
 
   	</style>
 
 <!-- JAVASCRIPT -->
 	<script>
-	// convert temperature from Fahrenheit to Celsius
-	function fahrenheitToCelsius(fahrenheit) {
- 	return (fahrenheit - 32) * 5 / 9;
- 	}
- 	// get form elements
-	const temperatureInput = document.querySelector("#temperature");
-	const convertButton = document.querySelector("#convert");
+	/* When the input field receives input, convert the value from fahrenheit to celsius */
+	function temperatureConverter(valNum) {
+	  valNum = parseFloat(valNum);
+	  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+	}
 	</script>
 </head>
 
@@ -107,27 +91,28 @@
 	</div>
 
 <!-- MAIN -->
-	<div class="converter">
+	<div id="container">
+		<div><img src="cvf.png" width="200"></div>
 		<div><h2>Converting from Fahrenheit to Celsius</h2>
-			<p id="converterparatext">To use this converter:</p>
-				<ol id="converterparatext">
+			<p class="para1">To use this converter:</p>
+				<ol class="para1">
 					<li>Enter the temperature in Fahrenheit in the text box.</li>
 					<li>Click the CONVERT button to see the temperature in Celsius.</li>
 					<li>To enter a new temperature, click the RESET button.</li>
 				</ol>
-			<img src="cvf.png" width="200">
+			<p class="para2">(x°F − 32) × 5/9 = y°C</p>
+			<p class="para2">
+			  <label>Fahrenheit:</label>
+			  <input id="inputFahrenheit" class="para1" type="number" placeholder="Enter temperature here"
+			  oninput="temperatureConverter(this.value)"
+			  onchange="temperatureConverter(this.value)">
+			</p>
+			<p class="para2">Celsius:<span id="outputCelsius" class="para1"</span></p>
 		</div>
-		<div> <form>
-			<input type="text" id="temperature" placeholder="Enter temperature">
-			<button id="convert" class="converterbuttons">Convert to Celsius</button>
-			<button id="reset" class="converterbuttons">Reset</button>
-	 	</form></div>
-		<div class="result"></div>
 	</div>
-</body>
 
 <!-- FOOTER -->
-
+<p class="para2">by Stephanie Meloche for LIB2024</p>
 </body>
 
 </html>
