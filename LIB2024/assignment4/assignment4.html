@@ -20,33 +20,60 @@
 		}
 
 		h1.pagetitle {
-			color: #B8E3F4;
+			color: #E85E53;
 			font-family: cursive;
 			font-size: 50px;
 			text-align: center;
+			text-shadow: 2px 2px #FAA35C;
 		}
 
 		hr.rounded {
-  			border-top: 8px solid #F79E5A;
-  			border-radius: 3px;
+  			border-top: 8px solid #E85E53;
+  			border-radius: 2px;
 		}
 
+		div.converter {
+
+		}
+
+		div.result {
+
+		}
 
   	</style>
+
 <!-- JAVASCRIPT -->
 	<script>
-
+	// convert temperature from Fahrenheit to Celsius
+	function fahrenheitToCelsius(fahrenheit) {
+ 	return (fahrenheit - 32) * 5 / 9;
+ 	}
+ 	// get form elements
+	const temperatureInput = document.querySelector("#temperature");
+	const unitSelect = document.querySelector("#unit");
+	const convertButton = document.querySelector("#convert");
 	</script>
 </head>
 
 <body>
+
 <!-- HEADER -->
 	<div>
 
 		<h1 class="pagetitle">Temperature Conversion Page</h1>
 		<hr class="rounded">
 	</div>
+
 <!-- MAIN -->
+	<div>
+		<div class="converter">
+			<input type="text" id="temperature" placeholder="Enter temperature">
+			<button id="convert">Convert to Celsius</button>
+	   		<button id="reset">Reset</button>	
+		</div>
+		<div class="result"></div>
+	</div>
+</body>
 
 <!-- FOOTER -->
 
