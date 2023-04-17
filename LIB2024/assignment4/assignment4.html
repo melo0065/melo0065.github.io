@@ -69,6 +69,48 @@
 			text-align: center;
 		}
 
+		#inputFahrenheit {
+			color: #FAA35C;
+			font-family: cursive;
+			font-weight: bold;
+			font-size: 15px;
+			text-align: center;
+			border-style: solid;
+			border-width: 2px;
+			border-color: #FAA356;
+			border-radius: 5px;
+			background-color: white;
+		}
+
+		#outputCelsius {
+			color: #FAA35C;
+			font-family: cursive;
+			font-weight: bold;
+			font-size: 15px;
+			text-align: center;
+			border-style: solid;
+			border-width: 2px;
+			border-color: #FAA356;
+			border-radius: 5px;
+			background-color: white;
+		}
+
+		.para3 {
+			color: #FAA35C;
+			font-family: cursive;
+			font-weight: bold;
+			font-size: 15px;
+			text-align: center;
+		}
+
+		.para4 {
+			color: white;
+			font-family: cursive;
+			font-weight: bold;
+			font-size: 15px;
+			text-align: center;
+		}
+
 
   	</style>
 
@@ -92,7 +134,7 @@
 
 <!-- MAIN -->
 	<div id="container">
-		<div><img src="cvf.png" width="200"></div>
+		<div><img src="cvf.png" height="500"></div>
 		<div><h2>Converting from Fahrenheit to Celsius</h2>
 			<p class="para1">To use this converter:</p>
 				<ol class="para1">
@@ -100,19 +142,18 @@
 					<li>Click the CONVERT button to see the temperature in Celsius.</li>
 					<li>To enter a new temperature, click the RESET button.</li>
 				</ol>
-			<p class="para2">(x°F − 32) × 5/9 = y°C</p>
 			<p class="para2">
 			  <label>Fahrenheit:</label>
-			  <input id="inputFahrenheit" class="para1" type="number" placeholder="Enter temperature here"
+			  <input id="inputFahrenheit" class="para2" type="number" placeholder="Enter temperature here"
 			  oninput="temperatureConverter(this.value)"
-			  onchange="temperatureConverter(this.value)">
-			</p>
-			<p class="para2">Celsius:<span id="outputCelsius" class="para1"</span></p>
+			  onchange="temperatureConverter(this.value)"></p>
+			<p class="para2">Celsius:<span id="outputCelsius" class="para2"></span></p>
+			<p class="para3">Do it yourself: (x°F − 32) × 5/9 = y°C</p>
 		</div>
 	</div>
 
 <!-- FOOTER -->
-<p class="para2">by Stephanie Meloche for LIB2024</p>
+<p class="para4">by Stephanie Meloche for LIB2024</p>
 </body>
 
 </html>
