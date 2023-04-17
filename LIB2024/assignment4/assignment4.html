@@ -19,7 +19,7 @@
 			background-size: cover;
 		}
 
-		h1.pagetitle {
+		h1 {
 			color: #E85E53;
 			font-family: cursive;
 			font-size: 50px;
@@ -32,12 +32,56 @@
   			border-radius: 2px;
 		}
 
-		div.converter {
-
+		.converter {
+			border-style: solid;
+			border-width: 10px;
+			border-color: #BBE9F8;
+			border-radius: 5px;
+			background-color: #BBE9F8;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: stretch;
+			align-content: space-around;
 		}
 
-		div.result {
+		.converterbuttons {
+			color: #FAA356;
+			font-family: cursive;
+		}
 
+		.result {
+			border-style: solid;
+			border-width: 10px;
+			border-color: #BBE9F8;
+			border-radius: 5px;
+			background-color: #BBE9F8;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: stretch;
+			align-content: space-around;
+		}
+
+		h2 {
+			color: #FAA35C;
+			font-family: cursive;
+			font-size: 25px;
+			text-align: center;
+		}
+
+		#converterparatext {
+			color: #FAA35C;
+			font-family: cursive;
+			font-weight: bold;
+			font-size: 15px;
+			text-align: left;
+		}
+
+		#thermometer {
+			justify-content: center;
 		}
 
   	</style>
@@ -50,7 +94,6 @@
  	}
  	// get form elements
 	const temperatureInput = document.querySelector("#temperature");
-	const unitSelect = document.querySelector("#unit");
 	const convertButton = document.querySelector("#convert");
 	</script>
 </head>
@@ -59,18 +102,26 @@
 
 <!-- HEADER -->
 	<div>
-
-		<h1 class="pagetitle">Temperature Conversion Page</h1>
+		<h1>Temperature Conversion Page</h1>
 		<hr class="rounded">
 	</div>
 
 <!-- MAIN -->
-	<div>
-		<div class="converter">
-			<input type="text" id="temperature" placeholder="Enter temperature">
-			<button id="convert">Convert to Celsius</button>
-	   		<button id="reset">Reset</button>	
+	<div class="converter">
+		<div><h2>Converting from Fahrenheit to Celsius</h2>
+			<p id="converterparatext">To use this converter:</p>
+				<ol id="converterparatext">
+					<li>Enter the temperature in Fahrenheit in the text box.</li>
+					<li>Click the CONVERT button to see the temperature in Celsius.</li>
+					<li>To enter a new temperature, click the RESET button.</li>
+				</ol>
+			<img src="cvf.png" width="200">
 		</div>
+		<div> <form>
+			<input type="text" id="temperature" placeholder="Enter temperature">
+			<button id="convert" class="converterbuttons">Convert to Celsius</button>
+			<button id="reset" class="converterbuttons">Reset</button>
+	 	</form></div>
 		<div class="result"></div>
 	</div>
 </body>
