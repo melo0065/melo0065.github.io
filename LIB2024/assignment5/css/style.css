@@ -1,5 +1,4 @@
 /* SITEWIDE */
-
 .titlemenu {
     padding: 20px;
     font-family: 'Aboreto';
@@ -7,7 +6,50 @@
     font-weight: bolder;
     color: hotpink;
     text-align: right;
+}
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  border-top: solid hotpink 2px;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  font-family: 'Aboreto';
+  font-weight: bold;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: hotpink;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: hotpink;
+  color: white;
+}
+
+.active {
+  background-color: hotpink;
+  color: white;
+}
+
+.footertext {
+    padding: 20px;
+    font-family: 'Aboreto';
+    font-size: 14px;
+    font-weight: bolder;
+    color: hotpink;
+    text-align: center;
 }
 
 /* Typography */
