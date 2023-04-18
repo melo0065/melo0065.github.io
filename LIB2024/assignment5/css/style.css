@@ -8,6 +8,7 @@
     text-align: right;
 }
 
+/* To style menu */
 ul {
   list-style-type: none;
   margin: 0;
@@ -79,25 +80,6 @@ p {
     text-align: left;
 }
 
-/* Columns */
-
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  padding: 20px;
-  height: 600px;
-}
-
-.left {
-  width: 25%;
-}
-
-.right {
-  width: 75%;
-}
 
 /* Search bar */
 .searchbar {
@@ -148,3 +130,58 @@ p {
         background-color: #ffb3de;
         border-color: hotpink;
       }
+
+/* HOMEPAGE ONLY */
+/* Columns */
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 20px;
+  height: 600px;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+/* ABOUT PAGE ONLY */
+
+/* TBR PAGE ONLY */
+.tbrpics {
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+
+
+/* REVIEW INDEX ONLY */
+/* Columns */
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 20px;
+  height: 600px;
+}
+
+.left1 {
+  width: 50%;
+}
+
+.right1 {
+  width: 50%;
+}
