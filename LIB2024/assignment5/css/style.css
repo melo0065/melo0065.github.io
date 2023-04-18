@@ -152,9 +152,15 @@ p {
   width: 75%;
 }
 
-/* ABOUT PAGE ONLY */
-
 /* TBR PAGE ONLY */
+#tbrstack {
+            border-color: hotpink; 
+            border-style: solid; 
+            margin: 5px;
+            background-color: white;
+            padding: 20px;
+        }
+
 .tbrpics {
             margin: 10px;
             display: flex;
