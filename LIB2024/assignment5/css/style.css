@@ -93,21 +93,65 @@ p {
   height: 600px;
 }
 
-/* HOMEPAGE ONLY */
-
-/* One row, two unequal columns */
-.hmpgleft {
+.left {
   width: 25%;
 }
 
-.hmpgright {
+.right {
   width: 75%;
 }
 
-/* ABOUT ONLY */
+/* Search bar */
+.searchbar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.searchbar input[type=text] {
+    float: none;
+    padding: 6px;
+    border: none;
+    font-family: 'Aboreto';
+    font-size: 17px;
+}
 
-/* TBR ONLY */
+  .searchbar input[type=text] {
+    border: 2px solid hotpink;
+}
 
+/* Pics */
+.currentread {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-/* REVIEW INDEX ONLY */
+.latestread {
+    float: left;
+    padding: 15px;
+}
+
+.latestrev {
+    float:left;
+    padding: 15px;
+}
+
+/* Button */
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-family: "Aboreto";
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: hotpink;
+        outline: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
+      }
+      .button:hover,
+      .button:focus {
+        background-color: #ffb3de;
+        border-color: hotpink;
+      }
